@@ -1,0 +1,14 @@
+/*
+    Time complexity: O(1)
+    Space complexity: O(1)
+*/
+
+long long sumFirstN(long long n) {
+    // Declare a variable 'ans'.
+    long long ans;
+    
+    // Assign 'ans' to sum of first 'n' natural numbers.
+    ans = n * (n + 1) / 2;
+    
+    return ans;
+}
