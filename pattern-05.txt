@@ -1,0 +1,28 @@
+/*
+    Time Complexity : O( N*N )
+    Space complexity: O( 1 )
+
+    Where N is the given input.
+*/
+
+void seeding(int n) {
+
+	// For loop 'row' in range 0 to N-1.
+	for(int row = 0; row < n; row++)
+	{
+		// For loop 'col' in range 0 to row.
+		for(int col = 0; col < n; col++)
+		{
+			// If 'col' < 'N - row'.
+			if(col < (n-row))
+            {
+                //Print '*'.
+                cout <<'*'<<' ' ;
+            }
+		}
+
+        //Print the next line.
+        cout << '\n';
+	}
+	
+}
