@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare two variables to store the input numbers
+    int a, b;
+    
+    // Input two numbers
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    
+    // Compare the numbers and print the relation
+    if (a < b) {
+        cout << "smaller" << endl;
+    } else if (a > b) {
+        cout << "greater" << endl;
+    } else {
+        cout << "equal" << endl;
+    }
+    
+    return 0;
+}
