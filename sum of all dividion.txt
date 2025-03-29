@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a number n: ";
+    cin >> n;
+    
+    // Array to store the sum of divisors for each number from 1 to n
+    long long sumDivisors[n + 1] = {0};
+
+    // Use a sieve-like approach to calculate sum of divisors for each number
+    for (int i = 1; i <= n; ++i) {
+        for (int j = i; j <= n; j += i) {
+            sumDivisors[j] += i;
+        }
+    }
+
+    // Sum up all sumOfDivisors(i) for i from 1 to n
+    long long totalSum = 0;
+    for (int i = 1; i <= n; ++i) {
+        totalSum += sumDivisors[i];
+    }
+
+    cout << "The sum of sumOfDivisors(i) for all i from 1 to " << n << " is: " << totalSum << endl;
+
+    return 0;
+}
