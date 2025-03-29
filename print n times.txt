@@ -1,0 +1,28 @@
+/*
+    Time Complexity: O(n)
+
+    Space Complexity: O(n)
+
+    Where 'n' is the given integer.
+*/
+
+void recursiveFunction(int n, vector<string>& ans) {
+    if (n == 0) { // Base case
+        return;
+    }
+
+    // Insert element in the array
+    ans.push_back("Coding Ninjas");
+
+    // Call recursive function
+    recursiveFunction(n - 1, ans);
+}
+
+vector<string> printNTimes(int n) {
+    vector<string> ans;
+
+    // Calling recursive function
+    recursiveFunction(n, ans);
+
+    return ans;
+}
