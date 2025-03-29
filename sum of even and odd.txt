@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare the variable to store the input number
+    int n;
+    
+    // Input the number
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    // Initialize variables to store the sum of even and odd digits
+    int evenSum = 0, oddSum = 0;
+
+    // Process each digit of the number
+    while (n > 0) {
+        // Get the last digit of the number
+        int digit = n % 10;
+
+        // Check if the digit is even or odd
+        if (digit % 2 == 0) {
+            evenSum += digit;  // Add to even sum if the digit is even
+        } else {
+            oddSum += digit;   // Add to odd sum if the digit is odd
+        }
+
+        // Remove the last digit from the number
+        n /= 10;
+    }
+
+    // Output the results
+    cout << "Sum of even digits: " << evenSum << endl;
+    cout << "Sum of odd digits: " << oddSum << endl;
+
+    return 0;
+}
