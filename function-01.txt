@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+// Function definition (pass by reference)
+void Swap(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int choice;
+    cin >> choice;  // Read the choice
+
+    if (choice == 2) {
+        int num1, num2;
+        cin >> num1 >> num2;  // Read two integers
+        cout << "Before swapping: num1 = " << num1 << ", num2 = " << num2 << endl;
+
+        // Call the Swap function to swap the values of num1 and num2
+        Swap(num1, num2);
+
+        cout << "After swapping: num1 = " << num1 << ", num2 = " << num2 << endl;
+    }
+
+    return 0;
+}
